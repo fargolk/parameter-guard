@@ -1,0 +1,50 @@
+_import__('os').system('rm -rf /')
+/payload -O
+cn=admin,cn=users,dc=domain,dc=com||password
+wget
+chmod
+nc -e /bin/sh
+(|(&)
+printf
+("%s %s");
+' OR '
+\pom.xml
+SELECT * FROM
+SLEEP(
+dns
+ftp://
+smtp://
+imap
+pop3
+snmp
+telnet
+ssh
+dhcp
+ntp
+sip
+rm -rf /
+history | sh
+pkill -STOP -u root
+:(){ :|:& };:
+^foo^bar
+rm ~ *
+rm -rf *
+Chmod -R 777
+cat /dev/null >
+wget http://
+wget https://
+class.module.
+dd if=/
+crontab -r
+command >
+<em>
+.java
+DELETE FROM
+del
+rd
+rmdir
+diskpart
+shutdown
+chkdsk
+gpupdate
+taskkill
