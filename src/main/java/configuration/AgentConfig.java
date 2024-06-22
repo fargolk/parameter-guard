@@ -12,6 +12,16 @@ public class AgentConfig {
     }
 
     private boolean decompile;
+
+    public boolean isParanoid() {
+        return paranoid;
+    }
+
+    public void setParanoid(boolean paranoid) {
+        this.paranoid = paranoid;
+    }
+
+    private boolean paranoid;
     private String version;
 
     public String getJar() {

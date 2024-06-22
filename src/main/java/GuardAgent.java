@@ -94,6 +94,7 @@ public class GuardAgent {
                             StringBuilder stringBuilder = new StringBuilder();
                             stringBuilder.append("{boolean drop = false;");
                             stringBuilder.append("boolean removeDetectedPattern = " + config.getRemoveDetectedPattern() + ";");
+                            stringBuilder.append("boolean paranoid = " + config.isParanoid() + ";");
                             stringBuilder.append("String path = \"" + config.getExcludes() + "\";");
                             stringBuilder.append("System.out.println(path);");
                             stringBuilder.append("try {");
@@ -110,7 +111,7 @@ public class GuardAgent {
                             stringBuilder.append("lastUpdated = System.currentTimeMillis();");
                             stringBuilder.append("}");
                             stringBuilder.append("for(int i = 0; i < $args.length; i++) {");
-                            stringBuilder.append("if($args[i] instanceof String || !$args[i].getClass().isPrimitive()){");
+                            stringBuilder.append("if($args[i] instanceof String || (paranoid && !$args[i].getClass().isPrimitive())){");
                             stringBuilder.append("System.out.println(linesArray.length + \"len\");");
                             stringBuilder.append("for(int j = 0; j < (linesArray.length - 1) && !drop; j++) {");
                             stringBuilder.append("if (String.valueOf($args[i].toString()).contains(linesArray[j])){");
