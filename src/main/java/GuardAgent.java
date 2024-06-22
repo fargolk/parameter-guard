@@ -84,7 +84,7 @@ public class GuardAgent {
                             java.util.List<Integer> stringIndexes = new java.util.ArrayList<>();
                             CtClass[] paramTypes = method.getParameterTypes();
                             for (int i = 0; i < paramTypes.length; i++) {
-                                if (paramTypes[i].getName().equals("java.lang.String") || !(paramTypes[i] instanceof CtPrimitiveType)) {
+                                if (paramTypes[i].getName().equals("java.lang.String") || (config.isParanoid() && !(paramTypes[i] instanceof CtPrimitiveType))) {
                                     System.out.println(className);
                                     System.out.println(">>>>>>>>>>>>>>>>Method name:" + method.getName());
                                     System.out.println("Found string parameter at index: " + i);
